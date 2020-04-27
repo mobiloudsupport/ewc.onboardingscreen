@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+  <style type="text/css">
+  
+  		#carousel { margin-top: 0;}
+  		#carousel .ons-swiper-target p {
+			font-family: 'Montserrat', sans-serif;
+			text-align: center;
+			font-size: 24px;
+			margin: 0 auto;
+		}
+  		#carousel .ons-swiper-target h3 {
+			font-family: 'Playfair Display', serif;
+			text-align: center;
+			font-size: 32px;
+			
+		}
+		.carousel1{ padding: 0 50px; }
+		.carousel2{ padding: 0 20px; }
+		.carousel3 { padding: 0 35px;}
+		.carousel4 { padding: 0 30px;}
+  		#carousel .ons-swiper-target img {
+			width: 100%;
+			max-width: 500px;
+			margin: 50px auto auto;
+			display: block;
+		}
+		.page__background {
+			background: no-repeat;
+			border: 0;
+		}
+		#carousel .cover-label { text-align: center; }
+		.slider-nav {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+			top: 0;
+		}
+.bottom-bar{ height: 50px; }
+		#carousel .cover-label span.indicators {
+			width: 14px;
+			height: 14px;
+			background: #000;
+			border-radius: 100%;
+			display: inline-block;
+			margin: 0 5px;
+		}
+		#carousel .cover-label span.indicators.active{
+			background: #999;
+		}
+		#carousel .skip {
+		    color: #069;
+		    text-align: center;
+		    margin-top: 6px;
+		}
+.page-with-bottom-toolbar > .page__content { bottom: 0;}
+.navigation {
+	text-align: center;
+	margin-top: 16px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.navigation > .nav-sec {
+	display: inline-block;
+	float: none;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	max-width: 33%;
+	flex: 0 0 33%;
+	min-height: 1px;
+}
+.navigation .skip {
+	cursor: pointer;
+}
+.cover-label .indicators {
+	width: 12px;
+	height: 12px;
+	margin:0 4px;
+	display: inline-block;
+	cursor: pointer;
+	background: #000;
+	border-radius: 100%;
+}
+.cover-label .indicators.active {
+	background: #999;
+}
+#carousel { min-height: 767px;}
+
+@media (min-width: 1367px){
+.carousel-content-main {
+    height: 100%;
+    align-items: center;
+    width: 100%;
+    vertical-align: middle;
+    display: grid;
+    margin: 70px 0;
+}
+.phone-img {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+}
+#carousel .ons-swiper-target img {
+    max-width: 450px;
+}
+.slide-discription {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center;
+}
+
+}
+
+
+@media (min-width: 1025px){
+	#carousel .ons-swiper-target img {	
+		max-width: 450px;
+	}
+	#carousel {
+	min-height: auto;
+}
+#carousel .ons-swiper-target img {
+	max-width: 450px;
+	margin: 0 auto;
+}
+}
+/*@media  (min-width:768px) and (max-width: 991px){
+	#carousel .ons-swiper-target img {
+		width: 100%;
+		margin: 50px auto auto;
+		display: block;
+	}
+	.slide-discription {
+		display: table;
+		width: 100%;
+		max-width: 70%;
+		margin: 0 auto;
+	}
+	#carousel .carousel-content {
+		max-width: 70%;
+		margin: 0 auto;
+		display: table-cell;
+		padding: 0 !important;
+		vertical-align: middle;
+		height: 200px;
+	}
+}*/
+
+@media (max-width: 1199px){
+body ons-page.page.page-with-bottom-toolbar .page__content {
+    position: static;
+}
+	.slide-discription {
+    display: flex;
+    margin: 0 auto;
+    height: 45vh;
+    align-items: center;
+    vertical-align: middle;
+	}
+	#carousel .carousel-content {
+		max-width: 100%;
+		margin: 0 auto;
+		display: block;
+		vertical-align: middle;
+		height: auto;
+	}
+	.carousel-content-main {
+    height: 100%;
+    width: 100%;
+	}
+	.phone-img {
+    width: 100%;
+    height: 45vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+	}
+	#carousel .ons-swiper-target img {
+    margin: 0 auto;
+    object-fit: scale-down;
+    height: 45vh;
+}
+}
+@media (max-width: 1024px){
+#carousel .ons-swiper-target h3 {
+    font-size: 4.5vw;
+}
+#carousel .ons-swiper-target p {
+    font-size: 2.5vw;
+}
+}
+
+@media (max-width: 767px){
+	#carousel .carousel-content{
+		padding: 0 15px;
+	}
+	/*#carousel { min-height: 640px;}*/
+	/*.carousel1{ padding: 0 50px; }*/
+	/*.carousel3 { padding: 0 35px;}
+	.carousel4 { padding: 0 30px;}
+	.carousel2 p{ padding: 0 30px;  }
+	/*.carousel3{ padding: 0 60px; }*/
+	/*.carousel4 { padding: 0 50px;}
+	.carousel2 { padding: 0 30px;}*/
+	.ons-swiper-target ons-carousel-item {
+    display: flex;
+    align-items: center;
+	}
+	#carousel .ons-swiper-target h3 {
+	font-size: 4.7vw;
+	}
+	#carousel .ons-swiper-target p {
+	font-size: 2.5vw;
+	}
+	#carousel .carousel-content {
+    max-width: 100%;
+	}
+}
+
+@media (max-width: 360px){
+	#carousel .carousel-content {
+		padding: 0 15px;
+		height: auto;
+		max-width: auto;
+	}
+	#carousel .ons-swiper-target img {
+		max-width: 100%;
+	}
+
+}
+
+  </style>
+</head>
+<body>
+	<ons-page>
+		<ons-carousel fullscreen swipeable auto-scroll overscrollable id="carousel">
+			<ons-carousel-item>
+				<div class="carousel-content-main">
+					<div class="phone-img">
+						<img src="images/screen1.png">
+					</div>
+					<div class="slide-discription">
+						<div class="carousel1 carousel-content">
+							<h3>Wake up to good news every day!</h3>
+							<p>No politics or ads!</p>
+						</div>
+					</div>
+				</div>
+			</ons-carousel-item>
+			<ons-carousel-item>
+				<div class="carousel-content-main">
+					<div class="phone-img">
+						<img src="images/screen2.gif">
+					</div>
+					<div class="slide-discription">
+						<div class="carousel2 carousel-content">
+							<h3>Beautiful content & videos curated for you!</h3>
+							<p>We do the searching for you so you can enjoy your free time!</p>
+						</div>
+					</div>
+				</div>
+			</ons-carousel-item>
+			<ons-carousel-item>
+				<div class="carousel-content-main">
+					<div class="phone-img">
+						<img src="images/screen3.gif">
+					</div>
+					<div class="slide-discription">
+						<div class="carousel3 carousel-content">
+							<h3>Receive daily positive reminders!</h3>
+							<p>Get custom notifications for the content you love.</p>
+						</div>
+					</div>
+				</div>
+			</ons-carousel-item>
+			<ons-carousel-item>
+				<div class="carousel-content-main">
+					<div class="phone-img">
+						<img src="images/screen4.gif">
+					</div>
+					<div class="slide-discription">
+						<div class="carousel4 carousel-content">
+							<h3>Get the nicest place on the internet in your pocket!</h3>
+						</div>
+					</div>
+				</div>
+			</ons-carousel-item>
+		</ons-carousel>
+		<ons-bottom-toolbar>
+			<div class="slider-nav">
+				<div class="navigation">
+					<div class="nav-sec">
+						<div class="skip first" onclick="last()">Skip</div>	
+					</div>
+					<div class="nav-sec">
+						<div class="cover-label">
+							<span id="dot0" class="indicators active" onclick="makeactive(0)"></span>
+							<span id="dot1" class="indicators" onclick="makeactive(1)"></span>
+							<span id="dot2" class="indicators" onclick="makeactive(2)"></span>
+							<span id="dot3" class="indicators" onclick="makeactive(3)"></span>
+						</div>	
+					</div>
+					<div class="nav-sec">
+						<div class="skip next" onclick="next()">Next</div>
+						<div class="skip skiplast" style="display: none;" onclick="nativeFunctions.handleButton('close_screen', null, null)">Done</div>
+					</div>
+				</div>
+			</div>
+		</ons-bottom-toolbar>
+	</ons-page>
+</body>
+<script type="text/javascript">
+	var prev = function() {
+	  var carousel = document.getElementById('carousel');
+	  carousel.prev();
+	};
+
+	var next = function() {
+	  var carousel = document.getElementById('carousel');
+	  carousel.next();
+	};
+
+	var last = function() {
+	  var carousel = document.getElementById('carousel');
+	  carousel.last();
+	};
+	var makeactive = function(index) {
+	  var carousel = document.getElementById('carousel');
+	  carousel.setActiveIndex(index);
+	};
+
+	document.querySelector('ons-carousel').addEventListener('postchange', function() {
+
+		var currentSlide = event.activeIndex;
+		var lastSlide = event.lastActiveIndex;
+
+		document.getElementById('dot'+currentSlide).classList.add("active");
+		document.getElementById('dot'+lastSlide).classList.remove("active");
+
+		if(currentSlide == 3){
+			document.getElementsByClassName('first')[0].style.display = 'none';
+			document.getElementsByClassName('next')[0].style.display = 'none';
+			document.getElementsByClassName('skiplast')[0].style.display = 'block';
+		}else{
+			document.getElementsByClassName('first')[0].style.display = 'block';
+			document.getElementsByClassName('next')[0].style.display = 'block';
+			document.getElementsByClassName('skiplast')[0].style.display = 'none';
+			
+		}
+
+	 });
+	
+</script>
+</html>
